@@ -26,6 +26,7 @@ export async function getUserCalc(req: Request, res: Response) {
 		.toArray();
 	res.json(result);
 }
+<<<<<<< HEAD
 export async function regionData(req: Request, res: Response) {
 	const db = client.db("skufBD");
 	const collection = db.collection("skufcolection");
@@ -71,3 +72,5 @@ export async function calcBuy(req: Request, res: Response) {
 		.toArray();
 	res.json(result);
 }
+=======
+>>>>>>> 806b517d9a99f0e7de35b3235b621dd8b324f156
