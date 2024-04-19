@@ -5,11 +5,11 @@ import { Map } from "./components/Map";
 
 function App() {
     return (
-        <div>
+        <>
             <div className="map-container">
                 <Map />
             </div>
-        </div>
+        </>
     );
 }
 

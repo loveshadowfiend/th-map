@@ -1,11 +1,6 @@
 .map-container {
+    position: relative;
     width: 100vw;
     height: 100vh;
-
-    .map-svg {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
+    background-color: rgba(125, 125, 255, 0.1);
 }
