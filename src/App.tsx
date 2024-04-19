@@ -1,5 +1,6 @@
 import "../node_modules/reset-css/reset.css";
 import "./styles/style.css";
+
 import { Map } from "./components/Map";
 
 function App() {
