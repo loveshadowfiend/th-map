@@ -7,23 +7,20 @@ import {
     DrawerTitle,
 } from "@/components/ui/drawer";
 import { Button } from "./ui/button";
+import { useMapStore } from "@/stores/useMapStore";
 
-interface RegionDrawerProps {
-    id: string;
-    isDrawerActive: boolean;
-    setIsDrawerActive: React.Dispatch<React.SetStateAction<boolean>>;
-}
-
-export const RegionDrawer = (props: RegionDrawerProps) => {
+export const RegionDrawer = () => {
+    const { isDrawerActive, currentRegionId, updateIsDrawerActive } =
+        useMapStore();
     return (
         <Drawer
-            direction="left"
-            open={props.isDrawerActive}
-            onOpenChange={props.setIsDrawerActive}
+            direction="bottom"
+            open={isDrawerActive}
+            onOpenChange={updateIsDrawerActive}
         >
-            <DrawerContent className="h-screen top-0 right-auto mt-0 w-[500px] rounded-none">
+            <DrawerContent className="h-[400px] mt-0 w-screen rounded-none">
                 <DrawerHeader>
-                    <DrawerTitle>{props.id}</DrawerTitle>
+                    <DrawerTitle>{currentRegionId}</DrawerTitle>
                 </DrawerHeader>
                 <div className="flex flex-col p-10 gap-10">
                     <div>

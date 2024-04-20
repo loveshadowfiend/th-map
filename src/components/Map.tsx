@@ -1,19 +1,13 @@
-import { useState } from "react";
 import { RegionDrawer } from "./RegionDrawer";
 import { AutoCompleteWrapper } from "./AutoCompleteWrapper";
+import { useMapStore } from "@/stores/useMapStore";
 
 export const Map = () => {
-    const [hoverId, setHoverId] = useState<string>("");
-    const [isDrawerActive, setIsDrawerActive] = useState<boolean>(false);
-    // cумма закупок по региону
-    // кол во поставщиков заказчиков
+    const { updateIsDrawerActive, updateCurrentRegionId } = useMapStore();
+
     return (
         <>
-            <RegionDrawer
-                id={hoverId}
-                isDrawerActive={isDrawerActive}
-                setIsDrawerActive={setIsDrawerActive}
-            />
+            <RegionDrawer />
             <AutoCompleteWrapper />
             <svg
                 className="map-svg"
@@ -28,14 +22,17 @@ export const Map = () => {
                         d="M232.269 363.506L228.359 362.204L223.145 363.506L221.842 368.714L223.145 372.62L228.359 375.224L232.269 372.62L234.876 368.714L232.269 363.506Z"
                         fill="white"
                         stroke="#D7E1F6"
-                        id="Г. Москва"
+                        id="77"
                         onMouseEnter={(
-                            event: React.MouseEvent<SVGPathElement, MouseEvent>
+                            e: React.MouseEvent<SVGPathElement, MouseEvent>
                         ) => {
-                            setHoverId(event.currentTarget.id);
+                            console.log(e.currentTarget.id);
                         }}
-                        onClick={() => {
-                            setIsDrawerActive(true);
+                        onClick={(
+                            e: React.MouseEvent<SVGPathElement, MouseEvent>
+                        ) => {
+                            updateCurrentRegionId(e.currentTarget.id);
+                            updateIsDrawerActive(true);
                         }}
                     />
                     <path
