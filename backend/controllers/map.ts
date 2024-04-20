@@ -1,6 +1,6 @@
 import type { Request, Response } from "express";
 import { client } from "../index";
-export async function getUserController(req: Request, res: Response) {
+export async function getAll(req: Request, res: Response) {
 	const db = client.db("skufBD");
 	const collection = db.collection("skufcolection");
 	const result = await collection.find({}).sort({ "Регион заказчика": 1 }).limit(20).toArray();
@@ -12,7 +12,7 @@ export async function getUserController(req: Request, res: Response) {
 // посчитать поля начальная сумма - процент понижения * поле начальная сумма только у заключенных контрактов
 
 // Статус контракта по закупке
-export async function getUserCalc(req: Request, res: Response) {
+export async function getContract(req: Request, res: Response) {
 	const db = client.db("skufBD");
 	const collection = db.collection("skufcolection");
 	const result = await collection
@@ -20,7 +20,7 @@ export async function getUserCalc(req: Request, res: Response) {
 			$or: [
 				{ "Статус контракта по закупке": "Контракт исполнен" },
 				{ "Статус контракта по закупке": "Контракт заключен" },
-			],
+			], 
 		})
 		.limit(20)
 		.toArray();
@@ -38,6 +38,42 @@ export async function regionData(req: Request, res: Response) {
 		.toArray();
 	res.json(result);
 }
+
+export async function regionDataBuyer(req: Request, res: Response) {
+	const db = client.db("skufBD");
+	const collection = db.collection("skufcolection");
+	const regionID = req.query.params;
+	console.log(req.query.params);
+	const result = await collection
+		.find({ "Регион заказчика": regionID})
+		.toArray();
+	res.json(result);
+}
+
+
+
+export async function regionDataProvider(req: Request, res: Response) {
+	const db = client.db("skufBD");
+	const collection = db.collection("skufcolection");
+	const regionID = req.query.params;
+	console.log(req.query.params);
+	const result = await collection
+		.find({ "Регион поставщика": regionID})
+		.toArray();
+	res.json(result);
+}
+
+export async function regionDataProvider(req: Request, res: Response) {
+	const db = client.db("skufBD");
+	const collection = db.collection("skufcolection");
+	const regionID = req.query.params;
+	console.log(req.query.params);
+	const result = await collection
+		.find({ "Регион поставщика": regionID})
+		.toArray();
+	res.json(result);
+}
+
 
 export async function calcBuy(req: Request, res: Response) {
 	const db = client.db("skufBD");
