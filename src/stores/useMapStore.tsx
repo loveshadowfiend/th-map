@@ -18,6 +18,9 @@ export const useMapStore = create<mapState>()((set) => ({
     hoverRegionName: "",
 
     updateIsDrawerActive: (open: boolean) => {
+        if (open == false) {
+            set({ currentRegionId: "" });
+        }
         set({ isDrawerActive: open });
     },
     updateHover: (open: boolean, regionName: string) => {
