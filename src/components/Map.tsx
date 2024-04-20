@@ -8,6 +8,7 @@ export const Map = () => {
     return (
         <>
             <RegionDrawer />
+
             <AutoCompleteWrapper />
             <svg
                 className="map-svg"
@@ -23,11 +24,6 @@ export const Map = () => {
                         fill="white"
                         stroke="#D7E1F6"
                         id="77"
-                        onMouseEnter={(
-                            e: React.MouseEvent<SVGPathElement, MouseEvent>
-                        ) => {
-                            console.log(e.currentTarget.id);
-                        }}
                         onClick={(
                             e: React.MouseEvent<SVGPathElement, MouseEvent>
                         ) => {
