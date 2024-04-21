@@ -10,6 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+<<<<<<< HEAD
+    "mongodb": "^6.5.0",
+    "mongoose": "^8.3.2",
+=======
     "@radix-ui/react-dialog": "^1.0.5",
     "@radix-ui/react-hover-card": "^1.0.7",
     "@radix-ui/react-popover": "^1.0.7",
@@ -22,6 +26,7 @@
     "clsx": "^2.1.0",
     "cmdk": "^1.0.0",
     "lucide-react": "^0.372.0",
+>>>>>>> 806b517d9a99f0e7de35b3235b621dd8b324f156
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3",
