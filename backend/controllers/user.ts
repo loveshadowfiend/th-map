@@ -39,6 +39,7 @@ export async function regionData(req: Request, res: Response) {
 	res.json(result);
 }
 
+
 export async function calcBuy(req: Request, res: Response) {
 	const db = client.db("skufBD");
 	const collection = db.collection("skufcolection");
