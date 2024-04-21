@@ -6,11 +6,10 @@ import { Map } from "./components/Map";
 
 function App() {
     const queryClient = new QueryClient();
+
     return (
         <QueryClientProvider client={queryClient}>
-            <div className="map-container">
-                <Map />
-            </div>
+            <Map />
         </QueryClientProvider>
     );
 }
