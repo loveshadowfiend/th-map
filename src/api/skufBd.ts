@@ -20,3 +20,4 @@ export const mockData = async () => {
 };
 
 // console.log((await fetchRegionData("Г. Москва")).data);
+// console.log(await fetchRegionData("Г. Москва"));
