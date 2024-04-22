@@ -1,8 +1,11 @@
 import { useMapStore } from "@/stores/useMapStore";
 import React from "react";
 
+// TODO: fix any :(
 export const Paths = () => {
-    const { updateCurrentRegionId, updateIsDrawerActive } = useMapStore();
+    const { updateCurrentRegionId, updateIsDrawerActive, updateHover } =
+        useMapStore();
+
     const handleClick = (e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
         updateCurrentRegionId(e.currentTarget.id);
         updateIsDrawerActive(true);
@@ -11,6 +14,14 @@ export const Paths = () => {
     return (
         <>
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -20,6 +31,14 @@ export const Paths = () => {
                 id="Г. Москва"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -29,6 +48,14 @@ export const Paths = () => {
                 id="Г. Санкт-Петербург"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -38,6 +65,14 @@ export const Paths = () => {
                 id="Ярославская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -47,6 +82,14 @@ export const Paths = () => {
                 id="Челябинская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -56,6 +99,14 @@ export const Paths = () => {
                 id="Тюменская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -65,6 +116,14 @@ export const Paths = () => {
                 id="Тульская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -74,6 +133,14 @@ export const Paths = () => {
                 id="Рязанская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -83,6 +150,14 @@ export const Paths = () => {
                 id="Орловская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -92,6 +167,14 @@ export const Paths = () => {
                 id="Омская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -101,6 +184,14 @@ export const Paths = () => {
                 id="Липецкая область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -110,6 +201,14 @@ export const Paths = () => {
                 id="Курская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -119,6 +218,14 @@ export const Paths = () => {
                 id="Курганская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -128,6 +235,14 @@ export const Paths = () => {
                 id="Калининградская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -137,6 +252,14 @@ export const Paths = () => {
                 id="Калининградская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -146,6 +269,14 @@ export const Paths = () => {
                 id="Ивановская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -155,6 +286,14 @@ export const Paths = () => {
                 id="Хабаровский край"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -165,6 +304,14 @@ export const Paths = () => {
             />
             {/* TODO !!*/}
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -175,6 +322,14 @@ export const Paths = () => {
             />
             {/* TODO !!*/}
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -185,6 +340,14 @@ export const Paths = () => {
             />
             {/* TODO !! */}
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -194,6 +357,14 @@ export const Paths = () => {
                 id="Республика Ингушетия"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -203,6 +374,14 @@ export const Paths = () => {
                 id="Республика Алтай"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -212,6 +391,14 @@ export const Paths = () => {
                 id="Республика Адыгея"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -221,6 +408,14 @@ export const Paths = () => {
                 id="Кировская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -230,6 +425,14 @@ export const Paths = () => {
                 id="Тамбовская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -239,24 +442,48 @@ export const Paths = () => {
                 id="Костромская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
                 d="M1208.55 203.36H1207.25L1205.94 207.266L1211.16 209.87L1213.77 208.568L1216.37 205.964L1215.07 204.662L1213.77 202.058H1211.16L1208.55 203.36ZM1245.05 120.683L1241.14 123.287V124.328V125.11L1239.83 125.891L1238.53 126.932L1237.23 132.531L1238.53 138.26L1239.83 141.255L1242.44 142.817L1243.75 143.468L1246.35 136.307L1250.26 134.224L1251.57 132.922V131.359L1254.17 125.761L1252.87 120.162L1250.26 120.553L1245.05 120.683ZM1333.68 147.765L1332.38 149.848L1331.08 151.28L1329.77 152.582L1331.08 152.842L1332.38 151.931L1334.99 152.582L1337.59 153.624V153.884V155.186V156.488H1340.2L1342.81 157.79H1341.5H1340.2V159.092V160.394H1338.9L1337.59 159.092L1336.29 160.394H1334.99H1332.38V157.79L1329.77 156.488L1324.56 152.712L1323.26 152.452H1321.95V152.322V153.493V155.186L1320.65 154.795V154.275L1319.35 152.582L1316.74 151.28L1314.13 152.061L1312.83 153.363L1316.74 154.014L1315.43 155.186L1312.83 157.79L1311.52 155.186L1310.22 153.754L1308.92 154.926L1306.31 156.488L1305.01 155.186L1303.7 154.926L1299.79 156.488L1295.88 159.092L1294.58 157.79H1293.28L1290.67 159.092L1288.06 160.394L1286.76 159.092L1284.15 157.79L1280.24 159.092L1276.33 161.696H1272.42H1269.81L1268.51 162.998L1265.9 164.3V162.998H1267.21V161.696H1265.9L1263.3 162.998L1261.99 164.3L1259.39 165.602H1256.78L1255.48 166.904L1251.57 168.206L1247.66 169.508H1246.35V170.81V172.112L1245.05 170.81H1243.75L1238.53 177.32L1237.23 178.622L1234.62 181.226H1233.32H1232.01L1233.32 182.528V183.83H1230.71L1228.1 185.132L1226.8 186.434L1224.19 187.736L1220.28 190.34L1216.37 191.642L1217.68 192.944L1218.98 194.246L1220.28 196.85V199.454V200.756H1222.89L1224.19 199.454L1230.71 203.36L1232.01 209.87L1230.71 212.474V215.078H1226.8L1224.19 212.474L1220.28 213.776L1216.37 215.078L1213.77 212.474L1207.25 209.87L1205.94 211.172V213.776V217.682L1203.34 220.286H1200.73L1198.12 221.588L1196.82 222.89L1194.21 225.494L1190.3 226.796L1187.7 225.494V226.796L1186.39 228.098L1185.09 229.4H1183.79L1182.48 232.004V233.306L1181.18 234.608L1179.88 235.91L1181.18 238.514L1182.48 239.816H1183.79L1185.09 241.118L1186.39 243.722H1187.7L1190.3 245.024V246.326V247.628L1192.91 251.534L1194.21 254.138L1191.61 255.44L1190.3 256.742L1181.18 267.158L1174.66 276.272L1175.97 277.574L1177.27 278.876L1175.97 281.48V284.084L1183.79 289.292L1191.61 291.896V293.198L1190.3 294.5L1192.91 299.708L1195.52 303.614H1199.43L1202.03 304.916L1203.34 310.124H1205.94H1207.25L1209.86 308.822H1211.16H1213.77L1216.37 310.124H1217.68H1222.89L1226.8 307.52L1230.71 308.822H1234.62H1235.92H1237.23L1239.83 306.218L1243.75 303.614L1242.44 301.01L1245.05 298.406L1246.35 297.104L1248.96 295.802H1250.26H1251.57H1252.87V294.5L1258.08 291.896H1259.39L1261.99 290.594L1264.6 287.99L1265.9 286.688L1268.51 285.386H1271.12L1272.42 286.688L1276.33 285.386L1280.24 284.084H1282.85L1284.15 285.386H1286.76H1290.67L1291.97 291.896L1293.28 299.708L1298.49 298.406H1303.7L1308.92 299.708L1312.83 301.01H1314.13L1315.43 299.708H1316.74L1318.04 298.406V295.802V294.5H1319.35L1321.95 291.896L1334.99 277.574L1336.29 278.876L1338.9 280.178L1341.5 278.876H1344.11V280.178L1345.41 281.48L1346.72 277.574V272.366L1349.32 264.554L1351.93 256.742H1350.63H1349.32V255.44L1348.02 254.138H1349.32V252.836L1351.93 255.44L1358.45 251.534L1364.97 247.628L1363.66 246.326V245.024V241.118L1359.75 239.816L1355.84 238.514V235.91L1351.93 237.212L1348.02 235.91L1341.5 232.004L1333.68 228.098L1332.38 232.004L1327.17 233.306L1324.56 230.702L1323.26 229.4L1321.95 233.306V234.608H1320.65H1319.35V235.91V237.212L1318.04 235.91L1319.35 234.608H1318.04H1316.74H1314.13V235.91L1315.43 238.514L1312.83 239.816L1311.52 241.118L1312.83 238.514L1314.13 237.212V235.91L1312.83 233.306H1314.13L1321.95 229.4L1320.65 228.098V226.796H1323.26H1325.86L1331.08 222.89L1333.68 215.078L1332.38 207.266L1329.77 199.454H1325.86L1320.65 198.152L1319.35 194.246L1320.65 191.642H1319.35L1318.04 190.34L1320.65 189.038L1321.95 190.34V187.736V185.132L1324.56 189.038L1325.86 192.944H1328.47L1329.77 191.642H1331.08L1333.68 196.85L1334.99 195.548L1336.29 194.246L1338.9 187.736L1341.5 183.83L1344.11 182.528L1348.02 181.226L1351.93 183.83L1354.54 185.132L1359.75 183.83L1363.66 181.226L1364.97 179.924L1366.27 178.622L1370.18 179.924L1374.09 178.622V177.32V176.018L1372.79 174.716V173.414L1375.39 176.018L1376.7 177.32L1378 174.716L1375.39 172.112H1376.7L1378 170.81V169.508H1375.39L1372.79 170.81L1371.48 169.508L1370.18 168.206V169.508H1368.88L1370.18 166.904V161.696L1368.88 160.394L1367.57 159.092L1364.97 157.79H1363.66H1362.36H1359.75H1358.45L1361.06 156.488L1363.66 155.186L1366.27 152.973L1367.57 150.108V149.197L1364.97 149.587L1362.36 148.676L1364.97 147.765L1368.88 145.421L1366.27 143.728L1364.97 142.426V138.13V135.005L1363.66 135.395L1362.36 136.437L1361.06 136.697L1359.75 136.828L1355.84 137.869L1353.23 138.781L1346.72 138.911H1342.81L1340.2 142.166L1338.9 145.421L1337.59 146.463V146.332V146.723L1338.9 147.765V148.806L1336.29 148.025L1334.99 146.723L1333.68 147.765Z"
                 fill="white"
                 stroke="#D7E1F6"
-                id="Чукотский автономный округ"
+                id="Чукотский АО"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
                 d="M1132.95 677.289H1131.65H1129.04L1127.74 675.987H1125.13L1121.22 672.081L1119.92 670.779H1117.31L1114.7 672.081L1112.1 670.779H1109.49L1108.19 673.383L1106.88 674.685H1105.58L1101.67 677.289H1100.37L1099.06 678.591L1097.76 682.497L1096.46 685.101V687.705V690.309L1097.76 691.611L1100.37 694.215V695.517V696.819L1101.67 699.423L1102.97 700.725L1104.28 702.027L1106.88 703.329L1109.49 702.027H1110.79L1118.61 698.121H1119.92H1121.22L1122.52 695.517V692.913L1125.13 691.611L1127.74 689.007H1129.04H1130.34L1132.95 683.799L1136.86 681.195H1139.47H1142.08L1145.99 678.591L1144.68 675.987L1143.38 673.383L1140.77 674.685H1139.47H1136.86H1135.56L1132.95 677.289Z"
                 fill="white"
                 stroke="#D7E1F6"
-                id="Еврейская автономная область"
+                id="Еврейская АО"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -266,6 +493,14 @@ export const Paths = () => {
                 id="Тульская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -275,6 +510,14 @@ export const Paths = () => {
                 id="Сахалинская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -284,6 +527,14 @@ export const Paths = () => {
                 id="Амурская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -293,6 +544,14 @@ export const Paths = () => {
                 id="Республика Бурятия"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -302,6 +561,14 @@ export const Paths = () => {
                 id="Республика Калмыкия"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -311,6 +578,14 @@ export const Paths = () => {
                 id="Кемеровская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -320,6 +595,14 @@ export const Paths = () => {
                 id="Новосибирская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -329,6 +612,14 @@ export const Paths = () => {
                 id="Алтайский край"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -338,6 +629,14 @@ export const Paths = () => {
                 id="Республика Дагестан"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -347,6 +646,14 @@ export const Paths = () => {
                 id="Ставропольский край"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -356,6 +663,14 @@ export const Paths = () => {
                 id="Кабардино-Балкарская Республика"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -365,6 +680,14 @@ export const Paths = () => {
                 id="Карачаево-Черкесская Республика"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -374,6 +697,14 @@ export const Paths = () => {
                 id="Ростовская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -383,6 +714,14 @@ export const Paths = () => {
                 id="Республика Марий Эл"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -392,6 +731,14 @@ export const Paths = () => {
                 id="Чувашская Республика"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -401,6 +748,14 @@ export const Paths = () => {
                 id="Нижегородская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -410,6 +765,14 @@ export const Paths = () => {
                 id="Московская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -419,6 +782,14 @@ export const Paths = () => {
                 id="Калужская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -428,6 +799,14 @@ export const Paths = () => {
                 id="Белгородская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -437,6 +816,14 @@ export const Paths = () => {
                 id="Забайкальский край"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -446,6 +833,14 @@ export const Paths = () => {
                 id="Приморский край"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -455,6 +850,14 @@ export const Paths = () => {
                 id="Республика Камчатка"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -464,6 +867,14 @@ export const Paths = () => {
                 id="Магаданская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -473,6 +884,14 @@ export const Paths = () => {
                 id="Воронежская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -482,6 +901,14 @@ export const Paths = () => {
                 id="Смоленская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -491,6 +918,14 @@ export const Paths = () => {
                 id="р. Онега"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -500,6 +935,14 @@ export const Paths = () => {
                 id="р. Ладога"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -509,6 +952,14 @@ export const Paths = () => {
                 id="р. Рыбинск"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -518,6 +969,14 @@ export const Paths = () => {
                 id="р. Байкал"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -527,6 +986,14 @@ export const Paths = () => {
                 id="Свердловская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -536,6 +1003,14 @@ export const Paths = () => {
                 id="Пермский край"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -545,6 +1020,14 @@ export const Paths = () => {
                 id="Республика Крым"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -554,6 +1037,14 @@ export const Paths = () => {
                 id="Севастополь"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -563,6 +1054,14 @@ export const Paths = () => {
                 id="Краснодарский край"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -572,6 +1071,14 @@ export const Paths = () => {
                 id="Оренбургская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -581,6 +1088,14 @@ export const Paths = () => {
                 id="Республика Башкортостан"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -590,15 +1105,31 @@ export const Paths = () => {
                 id="Удмуртская Республика"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
                 d="M461.676 243.722H455.158L449.945 248.93L451.248 254.138L457.765 255.44H459.069L460.372 254.138H461.676L462.979 252.836V254.138L461.676 255.44H462.979L464.283 254.138V248.93L461.676 243.722ZM521.634 273.668L524.241 274.97V276.272V277.574V278.876L528.152 281.48L530.759 277.574L529.455 273.668L528.152 269.762V267.158L526.848 264.554H524.241V267.158H522.938H521.634V273.668ZM485.138 272.366L481.227 271.064L476.014 269.762L469.496 271.064L470.8 272.366V274.97H468.193L466.889 273.668V272.366L468.193 271.064L464.283 269.762H460.372H459.069L457.765 268.46L449.945 269.762L442.124 268.46L440.82 267.158V265.856V267.158V268.46H439.517V269.762V272.366L438.214 269.762L435.607 268.46L434.303 267.158L429.089 271.064L423.876 276.272L417.358 273.668L412.145 269.762L413.448 265.856L414.751 263.252L413.448 260.648L412.145 258.044L417.358 255.44L421.269 254.138L427.786 258.044L429.089 256.742L430.393 255.44V254.138H431.696V250.232V246.326L427.786 241.118L422.572 237.212L421.269 233.306L419.965 232.004V235.91V242.42L412.145 248.93L405.627 254.138V258.044V261.95L400.414 265.856L397.807 268.46V269.762V272.366L403.02 280.178L406.931 287.99L408.234 290.594L409.538 291.896V293.198H412.145V291.896L414.751 290.594H417.358L419.965 291.896L422.572 294.5H431.696L442.124 295.802L444.731 294.5L446.034 293.198L447.338 294.5V295.802L449.945 294.5H452.552L459.069 299.708L466.889 306.218L505.993 329.654L507.296 330.956L508.6 332.258L516.421 330.956L525.545 328.352V327.05L526.848 324.446L528.152 325.748H529.455L532.062 324.446L534.669 323.144L537.276 321.842L539.883 320.54L541.186 319.238H542.49H543.793L546.4 320.54L549.007 316.634V314.03L547.703 312.728L545.097 308.822L546.4 307.52L547.703 306.218L550.31 303.614V301.01L546.4 294.5L541.186 289.292L534.669 284.084L533.365 282.782L532.062 281.48L530.759 282.782L529.455 284.084L528.152 282.782H526.848L525.545 284.084V291.896L524.241 299.708L522.938 298.406H521.634L519.028 299.708L516.421 298.406H515.117L513.814 301.01L509.903 302.312L508.6 299.708L509.903 297.104L512.51 295.802H513.814V293.198L512.51 290.594H513.814L504.69 289.292L496.869 290.594L494.262 286.688L486.441 284.084L481.227 285.386V286.688L479.924 287.99L478.621 285.386H476.014L474.71 286.688H473.407L474.71 285.386V284.084V282.782L472.103 281.48H469.496L470.8 280.178V278.876H472.103H473.407L476.014 280.178L477.317 277.574L478.621 274.97H479.924L481.227 273.668V272.366H479.924H482.531H485.138Z"
                 fill="white"
                 stroke="#D7E1F6"
-                id="Ненецкий автономный округ"
+                id="Ненецкий АО"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -608,6 +1139,14 @@ export const Paths = () => {
                 id="Архангельская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -617,6 +1156,14 @@ export const Paths = () => {
                 id="Республика Саха (Якутия)"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -626,6 +1173,14 @@ export const Paths = () => {
                 id="Иркутская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -635,6 +1190,14 @@ export const Paths = () => {
                 id="Красноярский край"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -644,15 +1207,31 @@ export const Paths = () => {
                 id="Томская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
                 d="M621.999 243.722V242.42H620.696H619.392L612.875 245.024V248.93L618.089 250.232L621.999 248.93V247.628V245.024V243.722ZM638.944 276.272V271.064L640.247 267.158V264.554L638.944 263.252L637.641 267.158L636.337 273.668L632.427 277.574L625.91 278.876L624.606 280.178H623.303L621.999 282.782L620.696 284.084L619.392 285.386L618.089 286.688V287.99L619.392 289.292V290.594L618.089 293.198L619.392 298.406V303.614L615.482 307.52L612.875 310.124L611.572 314.03L610.268 316.634L608.965 319.238V321.842V324.446L607.661 327.05L606.358 330.956H608.965H610.268L611.572 332.258L612.875 333.56L615.482 332.258H618.089L625.91 337.466L629.82 345.278V346.58L628.516 347.882L629.82 351.788V355.694H628.516H627.213L623.303 358.298L621.999 362.204L627.213 367.412L631.123 370.016H628.516L625.91 368.714L623.303 370.016H621.999V368.714V366.11L620.696 363.506V362.204L621.999 359.6V356.996L623.303 355.694L624.606 354.392H623.303V353.09L624.606 351.788V350.486V346.58L623.303 343.976V341.372V338.768H616.785H608.965L606.358 342.674L605.054 345.278V349.184L602.447 358.298L599.841 360.902L595.93 362.204L594.627 366.11L592.02 368.714L588.109 370.016L584.199 372.62L581.592 371.318L580.289 372.62L577.682 376.526H573.771V375.224L572.468 373.922L567.254 372.62L563.344 370.016L560.737 368.714L559.434 366.11L558.13 362.204V358.298L563.344 360.902L569.861 363.506L568.558 364.808H565.951V366.11L569.861 368.714H575.075V366.11L576.378 363.506H577.682L580.289 362.204L581.592 360.902H582.896V359.6V358.298L588.109 355.694L593.323 353.09L594.627 349.184V346.58L598.537 343.976L601.144 340.07L598.537 334.862L597.234 327.05L601.144 320.54L603.751 314.03L606.358 306.218L607.661 304.916L608.965 303.614L612.875 295.802L611.572 289.292V282.782L616.785 277.574L624.606 264.554V261.95V260.648L621.999 256.742L615.482 254.138L612.875 252.836L610.268 251.534H608.965L610.268 250.232H608.965V248.93L602.447 256.742L595.93 265.856L585.503 273.668L577.682 277.574H578.985L577.682 280.178H576.378L575.075 282.782H577.682L578.985 284.084L576.378 287.99L573.771 293.198V295.802L572.468 298.406L571.165 297.104H569.861L567.254 299.708L565.951 303.614V304.916L567.254 303.614H568.558L569.861 306.218L571.165 308.822H572.468V311.426L571.165 312.728V319.238L573.771 321.842V323.144L565.951 332.258H563.344L564.647 330.956V329.654L563.344 328.352L562.04 327.05L560.737 317.936L558.13 314.03L554.22 308.822H555.523L558.13 311.426V312.728V314.03V312.728L555.523 307.52L550.309 303.614L547.702 304.916L546.399 307.52H545.096L547.702 311.426L549.006 314.03V316.634L546.399 319.238L543.792 321.842L542.489 327.05L545.096 330.956L546.399 334.862L541.185 337.466L534.668 341.372L533.365 342.674L532.061 345.278H530.758H529.454H528.151H526.847L521.633 346.58H517.723L515.116 349.184V350.486L511.206 351.788L507.296 354.392V355.694L504.689 354.392H500.778L502.082 358.298V360.902L503.385 363.506V364.808L500.778 367.412L499.475 372.62H496.868L495.564 375.224L496.868 377.828L500.778 379.13L499.475 381.734L500.778 384.338H502.082H503.385H504.689L505.992 385.64L508.599 384.338H511.206V385.64L512.509 386.942L513.813 385.64H515.116L519.027 386.942L522.937 389.546L524.24 390.848L526.847 392.15L525.544 393.452L522.937 394.754L525.544 398.66L529.454 402.566L532.061 401.264L534.668 399.962L538.578 401.264H539.882L541.185 399.962H543.792V401.264L545.096 402.566H546.399L549.006 405.17L547.702 406.472L546.399 409.076V412.982L547.702 415.586L550.309 418.19V423.398V427.304L556.827 428.606L563.344 427.304L565.951 431.21L567.254 435.116L569.861 437.72L572.468 439.022L578.985 440.324L584.199 444.23L590.716 448.136L592.02 452.042L594.627 455.948H598.537H603.751L606.358 457.25L608.965 458.552L616.785 455.948L621.999 453.344H623.303V454.646V457.25L627.213 461.156H629.82H632.427L635.034 465.062L637.641 468.968H640.247H642.854L645.461 471.572L648.068 475.478L654.585 471.572L658.496 466.364L659.799 463.76V462.458L661.103 461.156L662.406 458.552L659.799 457.25L658.496 455.948V453.344L659.799 452.042H662.406L667.62 444.23L668.923 436.418L667.62 432.512L665.013 433.814L662.406 432.512L661.103 429.908H658.496L657.192 426.002H658.496L659.799 423.398V420.794V419.492V416.888V415.586V414.284L655.889 412.982L654.585 409.076V399.962L655.889 394.754L654.585 388.244L653.282 384.338L651.979 383.036V381.734L654.585 379.13V377.828L653.282 376.526V373.922V372.62V371.318L658.496 368.714L661.103 362.204L662.406 353.09L663.71 346.58L662.406 345.278L661.103 343.976V342.674L659.799 341.372L657.192 343.976H654.585H653.282L650.675 341.372L646.765 338.768L645.461 334.862L644.158 332.258V329.654V328.352L646.765 327.05V325.748L648.068 324.446L653.282 321.842L655.889 319.238L658.496 320.54H661.103L662.406 314.03V306.218L659.799 304.916L657.192 302.312V299.708V297.104H659.799H661.103L663.71 294.5V290.594L661.103 287.99L658.496 285.386L657.192 282.782L655.889 280.178H651.979L648.068 282.782H649.372H650.675L651.979 285.386V287.99L646.765 286.688L645.461 282.782L640.247 284.084L638.944 289.292L640.247 294.5L642.854 298.406H645.461L648.068 301.01L646.765 307.52L645.461 304.916L644.158 302.312L636.337 298.406L629.82 293.198L631.123 291.896L633.73 286.688L632.427 284.084L636.337 280.178L638.944 276.272ZM653.282 278.876L654.585 277.574V274.97L653.282 273.668L646.765 276.272L651.979 278.876H653.282ZM640.247 259.346L635.034 258.044L636.337 261.95H637.641L638.944 259.346H640.247ZM646.765 252.836L648.068 254.138L649.372 252.836L646.765 251.534L645.461 252.836H646.765Z"
                 fill="white"
                 stroke="#D7E1F6"
-                id="Ямало-Ненецкий автономный округ"
+                id="Ямало-Ненецкий АО"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -662,6 +1241,14 @@ export const Paths = () => {
                 id="Республика Коми"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -671,6 +1258,14 @@ export const Paths = () => {
                 id="Ульяновская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -680,6 +1275,14 @@ export const Paths = () => {
                 id="Республика Татарстан (Татарстан)"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -689,6 +1292,14 @@ export const Paths = () => {
                 id="Тверская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -698,6 +1309,14 @@ export const Paths = () => {
                 id="Брянская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -707,6 +1326,14 @@ export const Paths = () => {
                 id="Мурманская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -716,6 +1343,14 @@ export const Paths = () => {
                 id="Пензенская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -725,6 +1360,14 @@ export const Paths = () => {
                 id="Владимирская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -734,6 +1377,14 @@ export const Paths = () => {
                 id="Ленинградская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -743,6 +1394,14 @@ export const Paths = () => {
                 id="Астраханская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -752,6 +1411,14 @@ export const Paths = () => {
                 id="Волгоградская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -761,6 +1428,14 @@ export const Paths = () => {
                 id="Саратовская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -770,6 +1445,14 @@ export const Paths = () => {
                 id="Республика Мордовия"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -779,6 +1462,14 @@ export const Paths = () => {
                 id="Республика Карелия"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -788,6 +1479,14 @@ export const Paths = () => {
                 id="Псковская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -797,6 +1496,14 @@ export const Paths = () => {
                 id="Новгородская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -806,6 +1513,14 @@ export const Paths = () => {
                 id="Вологодская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
@@ -815,15 +1530,31 @@ export const Paths = () => {
                 id="Самарская область"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}
                 d="M566.493 431.21L563.886 428.606H557.369L550.851 427.304V423.398V418.19L548.244 416.888L546.941 412.982V409.076L548.244 407.774L549.548 405.17L546.941 402.566H545.637L544.334 401.264V399.962H541.727L540.424 401.264H539.12H535.21H532.603L529.996 402.566L526.086 398.66L523.479 394.754L526.086 393.452L527.389 392.15L524.782 390.848L523.479 389.546L519.568 386.942L515.658 385.64H514.355L513.051 386.942L511.748 385.64V384.338H509.141L506.534 385.64L505.231 384.338H503.927H502.624H501.32L500.017 381.734L501.32 379.13L497.41 377.828L496.106 375.224L497.41 372.62H500.017L501.32 368.714L503.927 364.808V363.506L502.624 362.204V358.298L501.32 354.392L498.713 355.694L494.803 356.996V358.298V359.6H492.196L489.589 360.902L486.982 362.204L485.679 359.6V358.298H483.072L480.465 359.6H479.162L477.858 360.902L475.251 362.204L473.948 363.506L472.644 371.318L467.43 376.526L462.217 381.734L459.61 386.942L457.003 393.452V394.754H458.306L457.003 397.358H454.396L453.093 401.264L451.789 403.868V405.17L453.093 406.472V407.774V410.378L457.003 412.982L460.913 415.586L464.824 424.7L466.127 427.304L468.734 431.21L466.127 436.418L464.824 441.626L463.52 444.23V448.136L466.127 449.438V452.042L464.824 457.25L463.52 462.458L467.43 465.062L471.341 467.666V472.874V479.384V481.988L472.644 483.29L476.555 484.592H480.465L481.768 481.988L484.375 480.686H485.679V481.988H489.589H493.499L496.106 483.29H497.41L498.713 481.988L500.017 480.686L505.231 479.384L507.837 475.478L509.141 474.176H511.748L513.051 476.78V478.082H516.962H518.265L522.175 479.384L523.479 480.686L524.782 481.988H526.086L528.693 485.895L529.996 491.103H531.3L532.603 492.405L531.3 493.707V495.009L533.906 497.613H535.21V501.519L533.906 504.123L537.817 506.727L541.727 508.029L543.031 509.331L544.334 510.633H548.244L550.851 513.237L556.065 508.029L561.279 502.821H565.189H569.1L573.01 496.311L574.313 491.103L575.617 489.801H576.92L578.224 487.197L576.92 484.592V483.29H578.224L579.527 484.592L584.741 485.895L589.955 487.197L591.258 488.499L592.562 489.801L595.169 488.499H596.472H597.775V491.103L600.382 493.707H605.596L610.81 492.405V495.009L612.113 497.613H614.72H617.327L618.631 498.915L621.238 500.217L622.541 498.915H623.845L627.755 496.311L630.362 495.009L634.272 497.613L636.879 498.915L648.61 496.311L656.431 491.103L655.127 488.499L649.914 485.895L648.61 476.78L646.003 471.572L643.396 468.968H640.789H638.182L635.576 465.062L632.969 461.156H630.362H627.755L623.845 457.25V455.948L622.541 453.344L616.024 455.948L609.507 458.552L606.9 457.25L604.293 455.948H599.079H595.169L592.562 453.344L591.258 448.136L584.741 444.23L579.527 440.324L573.01 439.022L570.403 437.72L567.796 435.116L565.189 431.21H566.493Z"
                 fill="white"
                 stroke="#D7E1F6"
-                id="Ханты-Мансийский автономный округ"
+                id="Ханты-Мансийский АО - Югра"
             />
             <path
+                onMouseOver={(
+                    e: React.MouseEvent<SVGPathElement, MouseEvent>
+                ) => {
+                    updateHover(true, e.currentTarget.id);
+                }}
+                onMouseLeave={() => {
+                    updateHover(false, "");
+                }}
                 onClick={(e: React.MouseEvent<SVGPathElement, MouseEvent>) => {
                     handleClick(e);
                 }}

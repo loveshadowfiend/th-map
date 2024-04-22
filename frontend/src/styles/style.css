@@ -4,6 +4,9 @@ path:hover {
   stroke: #cad6ef;
 }
 
-body {
-  overflow: hidden;
+/* body {
+    overflow: hidden;
+} */
+.gradient-card {
+  background: linear-gradient(228.92deg, rgba(255, 255, 255, 0.1) 17.95%, rgba(207, 224, 250, 0.1) 69.24%);
 }/*# sourceMappingURL=style.css.map */
